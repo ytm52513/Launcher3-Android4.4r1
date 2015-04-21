@@ -21,6 +21,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.launcher3">
 
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
     <permission
         android:name="com.android.launcher3.permission.PRELOAD_WORKSPACE"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
@@ -85,6 +89,8 @@
             android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.MONKEY"/>
